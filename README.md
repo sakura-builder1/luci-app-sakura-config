@@ -40,3 +40,8 @@ opkg install luci-app-sakura-config_*.ipk luci-i18n-sakura-config-zh-cn_*.ipk
 ## 许可
 
 Apache License 2.0
+
+## 说明
+
+本项目的**代码、图标与文档均由 AI 辅助生成**，并经人工测试与调整后发布。
+图标使用 AI 图像模型（gpt-image-2.5）生成。
