@@ -48,6 +48,18 @@ return view.extend({
 		o.placeholder = '0.3';
 		o.rmempty = false;
 
+		o = s.option(form.Value, 'blur', _('Blur radius'),
+			_('Backdrop blur radius in pixels, 0 - 40 (0 = disabled, default: 20).'));
+		o.datatype = 'range(0,40)';
+		o.placeholder = '20';
+		o.rmempty = false;
+
+		o = s.option(form.Value, 'blur_dark', _('Blur radius (dark mode)'),
+			_('Backdrop blur radius in dark mode, 0 - 40 (default: 20).'));
+		o.datatype = 'range(0,40)';
+		o.placeholder = '20';
+		o.rmempty = false;
+
 
 
 		/* ---------- 成功提示 ---------- */
