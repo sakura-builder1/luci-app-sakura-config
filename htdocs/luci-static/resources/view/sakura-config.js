@@ -25,7 +25,7 @@ return view.extend({
 
 		var m, s, o;
 		m = new form.Map('sakura', _('Sakura theme configuration'),
-			_('Configure the Sakura theme: primary color, transparency, blur, mode and backgrounds.'));
+			_('Configure the Sakura theme: primary color, transparency, mode and backgrounds.'));
 
 		/* ---------- 主题配置 ---------- */
 		s = m.section(form.TypedSection, 'global', _('Theme configuration'));
@@ -41,26 +41,11 @@ return view.extend({
 			return true;
 		};
 
-
 		o = s.option(form.Value, 'transparency', _('Transparency'),
 			_('Transparency of the content area, 0 - 1 (default: 0.3).'));
 		o.datatype = 'ufloat';
 		o.placeholder = '0.3';
 		o.rmempty = false;
-
-		o = s.option(form.Value, 'blur', _('Blur radius'),
-			_('Backdrop blur radius in pixels, 0 - 40 (0 = disabled, default: 20).'));
-		o.datatype = 'range(0,40)';
-		o.placeholder = '20';
-		o.rmempty = false;
-
-		o = s.option(form.Value, 'blur_dark', _('Blur radius (dark mode)'),
-			_('Backdrop blur radius in dark mode, 0 - 40 (default: 20).'));
-		o.datatype = 'range(0,40)';
-		o.placeholder = '20';
-		o.rmempty = false;
-
-
 
 		/* ---------- 成功提示 ---------- */
 		function notify_success(msg) {
